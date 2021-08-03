@@ -1,0 +1,643 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Akrobat-Regular';
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.4;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{overflow-x: hidden;}
+
+
+@font-face{
+    font-family:'ultralight';
+    font-style: normal;
+    src:url("../fonts/AvenirNextCyr-UltraLight.ttf");
+        
+}
+
+@font-face{
+    font-family:'bold';
+    font-style: normal;
+    src:url("../fonts/AvenirNextCyr-Bold.ttf");
+        
+}
+
+@font-face{
+    font-family:'demi';
+    font-style: normal;
+    src:url("../fonts/AvenirNextCyr-Demi.ttf");
+        
+}
+
+@font-face{
+    font-family:'heavy';
+    font-style: normal;
+    src:url("../fonts/AvenirNextCyr-Heavy.ttf");
+        
+}
+
+@font-face{
+    font-family:'light';
+    font-style: normal;
+    src:url("../fonts/AvenirNextCyr-Light.ttf");
+        
+}
+
+@font-face {
+    font-family: "akrobat-regular";
+    font-style: normal;
+    src: url("../fonts/Akrobat-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-bold";
+    font-style: normal;
+    src: url("../fonts/Akrobat-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-extrabold";
+    font-style: normal;
+    src: url("../fonts/Akrobat-ExtraBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-extralight";
+    font-style: normal;
+    src: url("../fonts/Akrobat-ExtraLight.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-light";
+    font-style: normal;
+    src: url("../fonts/Akrobat-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-bold";
+    font-style: normal;
+    src: url("../fonts/Akrobat-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "akrobat-semibold";
+    font-style: normal;
+    src: url("../fonts/Akrobat-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "avenir";
+    font-style: normal;
+    src: url("../fonts/AvenirNextCyr-UltraLight.ttf");
+  }
+
+  @import"./menu";
+
+
+  @mixin h2 {font-size: 48px; font-family: "akrobat-bold";padding-bottom: 53px;text-transform: uppercase; }
+  @mixin h2-mobile {font-size: 40px; font-family: "akrobat-bold";padding-bottom: 53px;text-transform: uppercase; }
+  @mixin h3 {font-size: 30px;font-family: 'Akrobat-Bold';} 
+  
+  @mixin flex-center {display: flex;justify-content: center;align-items: center;}
+
+  @mixin btn {width: 398px;height:56px;border:  1px solid #DAA940;color: black;@include flex-center();text-transform: capitalize;padding-left: 5px;font-family: "akrobat-regular";font-size: 30px;;
+    hr{width: 40px;background-color: black;}
+  }  
+
+  @mixin line {background-color: #DAA940;height: 2px;width: 180px;position: absolute;top: 100px;}
+  
+
+
+
+.banner{height: 950px;background-color: #FBFBFB;;
+    .row{
+        .col-md-6{
+            .inner{background-color: black;height:300px;;
+            h1{font-size: 90px;text-transform: uppercase;color: #DAA940;padding: 0px 0 0 20px;line-height: 1.3; font-family:'light';font-weight: 500;}
+            }
+
+            .info{padding: 37px ;
+                h3{font-size: 36px;line-height: 1.6; font-family: "akrobat-extrabold";}
+                p{font-size: 24px;line-height: 1.5;padding-bottom: 20px; font-family: "akrobat-regular";}
+                a{height: 44px;border:  1px solid black;color: black;font-size: 18px;text-decoration: none; font-family: "akrobat-light";padding: 5px 10px 5px 10px;}
+            }
+        }
+        }
+
+
+}
+
+
+.our-values{position: relative;padding-top: 132px;padding-bottom: 50px;;
+    .line{position: absolute;top: 172px;;height: 32px;width: 50%;background-color: #F8F8F8;border-top: 2px solid #DAA940;z-index: -1;}
+    .container{
+        .start{font-size: 22px;font-family: "akrobat-extralight";}
+        h2{@include h2-mobile();padding-top: 25px;}
+        .founded{font-size: 22px;font-family: "akrobat-extralight";margin-bottom: 40px;}
+    }
+}
+
+
+.expertise{text-align: center;position: relative;;
+   h2{@include h2-mobile()}
+   .line{position: absolute;top: 0px;right: 0;height: 32px;width: 59%;background-color: #F8F8F8;border-top: 2px solid #DAA940;z-index: -1;}
+    .container{
+        .row{
+            .col-md-4{
+                .card{width: 250px;height: 275px;background-color: #F8F8F8;text-align: center;padding: 42px 30px 0 30px;margin: 0 auto;margin-bottom: 37px;border: none;;
+                    img{width: 70px;height: 70px;object-fit: cover;margin: 0 auto;}
+                    h4{padding: 20px 0 20px 0;font-size: 22px;font-family: "akrobat-semibold";}
+                    p{font-size: 18px;font-family: "akrobat-extralight";}
+                
+                }
+            }
+        }
+    }
+}
+
+
+.featured{position: relative;height: 880px;;
+    h2{@include h2-mobile();padding-bottom: 50px;}
+    
+    #line{@include line()}
+    .company{position: absolute;top: 150px;font-size: 24px;font-family: "akrobat-bold";;;
+      span{display: block;font-family: "akrobat-bold";font-size: 24px;;}
+    }
+    .container{
+        .info{background: transparentize($color: #fff, $amount: .4);;width: 100%;height: 478px;top: 232px;padding-top: 40px;padding-left: 10px;;
+            h2{font-size: 40px;padding-bottom: 0px;}
+            a{@include btn();width: 70%;}
+        }
+        .comp{width: 100%;height:150px;margin-top: 105px;;
+            img{width: 100%;height: 100%;object-fit: cover;}
+        }
+    }
+}
+
+
+.hotels{height: 750px;background-color: #F8F8F8;padding: 30px 0 0px 0;;;
+    .container{
+        .row{
+            .col-md-6{
+                .inner{height: 280px;
+                    img{width: 100%;height: 100%;object-fit: cover;}
+                }
+                .hotel-info{
+                    .line{@include line();top: 0px;}
+                    p{font-size: 24px;font-family: "akrobat-bold";margin-top: 22px;;
+                      span{display: block;}
+                    }
+                    h2{@include h2-mobile();padding-bottom: 0px;}
+                   a{@include btn();width: 90%;}
+                }
+            }
+        }
+    }
+}
+
+
+.zimnat{padding-top: 50px;height: 1000px;
+    .container{position: relative;
+        .line{@include line();top: -30;}
+        .row{
+            .col-md-6{
+                .info{
+                   
+                    p{font-size: 24px;font-family: "akrobat-bold";
+                        span{display: block;}
+                    }
+                    h2{@include h2-mobile();padding-bottom: 5px;}
+                    a{@include btn();width: 76%;margin-bottom: 10px;}
+                }
+                .inner{width: 100%;height: 400px;
+                  img{width: 100%;height: 100%;object-fit: contain;}
+                }
+            }
+        }
+        .see-more{border-bottom: 2px solid #DAA940;float: right;display: flex;width: 180px;color: black;font-family: "akrobat-bold"
+                }
+                #arrow{width: 80px;height: 10px;object-fit: contain;}
+        
+    }
+}
+
+.news{position: relative;
+    h2{@include h2-mobile();padding: 26px 0 34px 20px;}
+    .goldline{position: absolute;width: 100%;height: 310px;border: 2px solid #DAA940;top: 0;}
+    .container{
+        .row{
+          .col-md-4{
+              .card{width: 295px;height: 360px;margin: 0 auto;;border: 1px solid #DAA940;padding-bottom: 23px;margin-bottom: 50px;;
+                hr{background-color: #DAA940;height: 2px;width: 42px;margin-top: 12px;margin-left: 12px;}
+                  img{height: 120px;}
+                  p{font-size: 18px;padding-left: 15px;}
+                  p:first-of-type{font-family: "akrobat-extralight";}
+                  p:nth-of-type(2){font-family: "akrobat-semibold";padding: 12px 0 10px 12px;}
+                  p:nth-of-type(3){font-family: "akrobat-regular";}
+                  a{margin-top: 14px;border: 1px solid #DAA940;color: black;font-size: 16px; font-family: "akrobat-semibold";text-transform: uppercase;width: 94px;@include flex-center();margin-left: 12px;;}
+                  
+              }
+          }
+        }
+       
+    }
+    .up-to-date{display: flex;flex-wrap: wrap;flex-direction: column;;align-items: center;background-color: #F8F8F8;margin-top: 20px;width: 100%;height: 240px;position: relative;overflow: visible;;
+        h2{padding-bottom: 0px;position: absolute;overflow: visible;top: -50px;}
+        input{width: 80%;height: 57px;margin-top: 100px;text-transform: capitalize;;}
+        p{padding:10px 10px 0 10px;text-align: center;}
+    }
+}
+
+.the-team{padding: 45px 19px 45px 19;position: relative;
+  h2{@include h2-mobile();padding-bottom: 20px;}
+  p{font-size: 30px; font-family: "akrobat-regular";padding-bottom: 20px;}
+  a{@include btn();width: 100%;}
+
+  .top{position: absolute;background-color: #DAA940;height: 3px;width: 398px;top: 0;left: 0;}
+  .bottom{position: absolute;background-color: #DAA940;height: 3px;width: 398px;bottom: 0;right: 0;}
+}
+
+
+footer{
+    .grey{height: 64px;background-color: #F8F8F8;margin-bottom: 87px;}
+    .container{
+        .col-md-6{
+            p{font-size: 30px;font-family: "akrobat-bold"}
+        }
+        .col-md-6{display: flex;justify-content: space-between;;
+            .inner{display: flex;flex-direction: column;;
+                p{font-size: 20px;font-family: "Akrobat-SemiBold";text-transform: uppercase;margin-bottom: 12px;}
+                a{color: black;font-size: 18px;font-family: "Akrobat-Regular";margin-bottom: 12px;}
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// PORTFOLIO PAGE
+
+
+.hero{background-color:#000000;border-bottom: 5px solid #ED6663;height: 463px;padding-top: 117px;;
+  h2{@include h2();color: white;width: 277px;font-family: 'Akrobat-Bold';padding-bottom: 0;}
+  p{color: white;width: 630px;font-family:'Akrobat-ExtraLight';font-size: 30px;}
+
+}
+
+.industry{padding-top: 140px;
+    h2{@include h2();width: 100%;}
+    h3{font-size: 30px;font-family: 'Akrobat-Bold';width: 100%;text-transform: capitalize;padding-bottom: 40px;}
+    .container{display: flex;flex-wrap: wrap;width: 900px;border-bottom: 1.4px solid #979797;padding-bottom: 60px;margin-bottom: 60px;;
+    p{font-size: 24px;font-family: 'Akrobat-Bold';padding-right: 45px;}
+    .risk{padding-left: 30px;}
+    }
+
+    
+    #health,#hosp{flex-direction: column;}
+}
+
+
+
+
+
+
+// PORTFOLIO PAGE ENG 
+
+
+
+// MEET THE TEAM PAGE
+
+.gallary{
+    h2{@include h2();padding-left: 125px;}
+    .container{
+        .row{
+            .col-md-3{
+                .card{width: 278px;height: 350px;position: relative;border: none;text-transform: capitalize;margin-bottom: 50px;;
+                    img{width: 250px;height: 300px;}
+                                      
+                    .title{position: absolute;top: 238px;right: 0;width: 225px;height: 102px;background: transparentize($color: white, $amount: .4);padding-left: 10px;padding-top: 10px;cursor: pointer;;
+                        p{font-size:24px ;font-family: 'Akrobat-Bold';width:102px ;}  
+                        span{font-size: 18px;font-family: 'Akrobat-Bold';color: #DAA940;}
+                    }
+                     .maya{ p{padding-bottom: 20px;}}
+                    #maya{background: transparentize($color: #DAA940, $amount: .3);
+                        span{color: black;}
+                        p{padding-bottom: 20px;}
+                       }
+                }
+            }
+        }
+    }
+}
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+// MEET THE TEAM PAGE END
+
+
+
+// NEWS
+
+.news-main {height: 783px;background-image: url(../img/a-man-reading-a-news-paper-3669735.png);background-size: contain;
+    h2{@include h2();color: white;width: 290px;margin-left: 140px;margin-top: 220px;}
+}
+
+.mutasa{padding-top: 128px;
+  .container{
+      .row{
+          .col-md-6{
+              .inner{padding: 60px;border:  1px solid #DAA940;height: 526px ;width: 505px ;
+                span{font-size: 18px;font-family: 'Akrobat-ExtraLight';}
+                 h2{@include h2();width: 345px;padding-bottom: 20px;}
+                 p{font-size: 30px;font-family: 'Akrobat-Regular';width: 371px;margin-bottom: 18px;}
+                 a{@include btn();font-family: 'Akrobat-SemiBold';}
+            }
+
+            .inner2{text-align: center;padding-top: 100px;;;
+                 img{width: 253px;height: 253px;object-fit: cover;}
+                    h3{font-size: 30px;font-family: 'Akrobat-SemiBold';margin-top: 30px;padding-bottom: 5px; }
+                       }
+          }
+      }
+  }
+}
+
+.more-news{
+  
+    .container{display: flex;justify-content: space-between;flex-wrap: wrap;border-bottom: 1px solid #979797;padding-bottom: 87px;margin-bottom: 53px;;
+        h2{@include h2();width: 100%;}
+        p{width: 835px;font-size: 24px;;
+            span{display: block;}
+        }
+        h3{@include h3();text-transform: uppercase;padding-bottom: 10px;}
+    
+    }
+}
+
+// NEWS END
+
+// masawara-family
+
+.masawara-family{
+    span{margin-left: 85px;}
+
+    p{margin:0 85px 0 100px; margin-bottom: 30px;font-size: 18px;font-family: 'Akrobat-SemiBold'; }
+}
+// masawara-family end
+
+@media screen and (min-width:768px){
+    
+
+    .banner{height: 450px;;
+        .row{
+            .col-md-6{
+                .inner{background-color: black;height:450px;;
+                
+                }
+    
+                .info{padding: 60px 30px 30px 30px ;
+                    h3{font-size: 30px;}
+                    
+                }
+            }
+            }
+    
+    
+    }
+
+
+    .our-values{padding-top: 40px;}  
+
+    .featured{height: 950px;
+    .container{
+        .comp{height:250px;
+        }
+    }
+      }
+
+      .hotels{height: 450px;}
+
+      .zimnat{height: 520px;}
+    
+      .news{
+        .container{
+            .row{
+              .col-md-4{
+                  .card{width:100%;height: 370px;
+                    hr{margin-top: 12px;}
+                      p:nth-of-type(2){padding: 2px 0 2px 12px;}
+                  }
+              }
+            }
+           
+        }
+        .up-to-date{height: 200px;
+            input{width: 50%;margin-top: 50px;}
+            
+        }
+    }  
+    
+
+}
+
+
+
+@media screen and (min-width:1200px){
+
+    .banner{height: 741px;
+        .row{
+            .col-md-6{
+                .inner{background-color: black;height:741px;@include flex-center();text-align: center;;;
+                h1{font-size: 200px;text-transform: uppercase;color: #DAA940;padding: 0px;line-height: 1.3; font-family:'light';}
+                }
+    
+                .info{padding: 243px 138px 170px 137px ;
+                    h3{font-size: 36px;line-height: 1.6; font-family: "akrobat-extrabold";}
+                    p{font-size: 24px;line-height: 1.5;padding-bottom: 20px; font-family: "akrobat-regular";}
+                    a{height: 44px;border:  1px solid black;color: black;font-size: 24px;text-decoration: none; font-family: "akrobat-light";padding: 5px 40px 5px 10px;}
+                }
+            }
+            }
+    
+    
+    }
+    
+
+    .our-values{
+        .line{position: absolute;top: 172px;;height: 32px;width: 24%;background-color: #F8F8F8;border-top: 2px solid #DAA940;z-index: -1;}
+        .container{
+            h2{@include h2();}
+            .founded{font-size: 22px;}
+        }
+    }
+
+    
+    .featured{height: 720px;
+        h2{@include h2();}
+        
+        .container{
+            .info{position: absolute;;width: 730px;height: 478px;top: 232px;padding-top: 40px;;
+                h2{@include h2();padding-bottom: 15px;}
+                a{@include btn()}
+            }
+            .comp{width:480px ;height:494px;float: right;;
+                img{width: 100%;height: 100%;object-fit: cover;}
+            }
+        }
+    }
+    
+
+    .hotels{height: 612px;background-color: #F8F8F8;padding: 120px 0 120px 0;;
+        .container{
+            .row{
+                .col-md-6{
+                    .inner{height: 356px;
+                        img{width: 100%;height: 100%;object-fit: cover;}
+                    }
+                    .hotel-info{margin-left: 50px;
+                        .line{@include line();top: -12px;}
+                        p{font-size: 24px;font-family: "akrobat-bold";margin-top: 22px;;
+                          span{display: block;}
+                        }
+                        h2{@include h2();padding-bottom: 2px;}
+                       a{@include btn()}
+                    }
+                }
+            }
+        }
+    }
+    
+    .zimnat{padding-top: 60px;height: 650px;;
+        .container{
+            .line{@include line();top: -30;}
+            .row{
+                .col-md-6{
+                    .info{
+                
+                        h2{@include h2;padding-bottom: 5px;}
+                    }
+                    .inner{width: 606px;height: 450px;
+                
+                    }
+                }
+            }
+            .see-more{margin-top: 67px;display: flex;width: 180px;color: black;font-family: "akrobat-bold"
+                    }
+                    #arrow{width: 80px;height: 10px;object-fit: contain;}
+            
+        }
+    }
+    
+    .news{
+        h2{@include h2();padding: 26px 0 34px 100px;}
+        .goldline{position: absolute;width: 100%;height: 310px;border: 2px solid #DAA940;top: 0;}
+        
+        .up-to-date{flex-direction: row;padding-left: 20px;margin-top: 200px;width: 80%;height: 240px;float: right;
+            h2{width: 430px;padding-bottom: 0px;position: absolute;overflow: visible;top: -50px;@include h2()}
+            input{width: 393px;height: 57px;margin-left: 45%;margin-top: 0;;}
+            p{padding-left: 100px;width: 100%;;}
+        }
+    }
+
+    .the-team{padding: 45px 190px 45px 190;position: relative;
+        h2{@include h2;padding-bottom: 20px;}
+        p{font-size: 36px; font-family: "akrobat-regular";padding-bottom: 20px;}
+        a{@include btn()}
+      
+        .top{position: absolute;background-color: #DAA940;height: 3px;width: 398px;top: 0;left: 0;}
+        .bottom{position: absolute;background-color: #DAA940;height: 3px;width: 398px;bottom: 0;right: 0;}
+      }
+      
+      
+      footer{
+          .grey{height: 64px;background-color: #F8F8F8;margin-bottom: 87px;}
+          .container{
+              .col-md-6{
+                  p{font-size: 36px;font-family: "akrobat-bold"}
+              }
+              .col-md-2{
+                  .inner{display: flex;flex-direction: column;
+                      p{font-size: 24px;font-family: "Akrobat-SemiBold";text-transform: uppercase;margin-bottom: 12px;}
+                      a{color: black;font-size: 20px;font-family: "Akrobat-Regular";margin-bottom: 12px;}
+                  }
+              }
+          }
+      }
+      
+}
+
+
+
